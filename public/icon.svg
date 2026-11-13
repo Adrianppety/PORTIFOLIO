@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <!-- Fundo Arredondado (Squircle) -->
+  <rect x="56" y="56" width="400" height="400" rx="120" ry="120" fill="#76825B" />
+  
+  <!-- Símbolo de Código </> -->
+  <g fill="none" stroke="#FFFFFF" stroke-width="24" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Menor Que < -->
+    <path d="M 205,200 L 125,256 L 205,312" />
+    
+    <!-- Barra / -->
+    <path d="M 285,160 L 225,352" />
+    
+    <!-- Maior Que > -->
+    <path d="M 307,200 L 387,256 L 307,312" />
+  </g>
+</svg>
