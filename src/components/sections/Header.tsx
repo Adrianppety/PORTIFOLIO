@@ -65,7 +65,7 @@ export function Header() {
 
           <div className="flex items-center gap-3">
             <a
-              href="https://instagram.com/adrianppety"
+              href="https://instagram.com/adrianppety.dev"
               target="_blank"
               rel="noreferrer"
               aria-label="Instagram"
