@@ -18,6 +18,11 @@ export function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const { theme, toggleTheme } = useTheme();
 
+  const scrollToContact = () => {
+    document.getElementById("contato")?.scrollIntoView({ behavior: "smooth" });
+    setIsMobileMenuOpen(false);
+  };
+
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
@@ -89,7 +94,7 @@ export function Header() {
               {theme === "light" ? <Moon className="w-5 h-5" /> : <Sun className="w-5 h-5" />}
             </Button>
 
-            <Button variant="primary" size="sm" className="hidden lg:inline-flex">
+            <Button variant="primary" size="sm" className="hidden lg:inline-flex" onClick={scrollToContact}>
               Vamos conversar
             </Button>
 
@@ -129,7 +134,7 @@ export function Header() {
                     </>
                   )}
                 </Button>
-                <Button variant="primary" className="flex-1">
+                <Button variant="primary" className="flex-1" onClick={scrollToContact}>
                   Vamos conversar
                 </Button>
               </div>

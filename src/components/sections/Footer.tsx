@@ -6,19 +6,19 @@ const socialLinks = [
   { href: "https://github.com/Adrianppety", label: "GitHub", icon: Github },
   { href: "https://www.linkedin.com/in/adrian-pety-6a48883b5/", label: "LinkedIn", icon: Linkedin },
   { href: "https://x.com/Adrianppety", label: "Twitter/X", icon: Twitter },
-  { href: "mailto:adrianppety@gmail.com", label: "Email", icon: Mail },
+  { href: "mailto:adrianppety@gmail.com", label: "E-mail", icon: Mail },
 ];
 
 const footerLinks = {
   Projetos: [
     { label: "GitHub", href: "https://github.com/Adrianppety" },
     { label: "Projetos Pessoais", href: "#projetos" },
-    { label: "Open Source", href: "https://github.com/Adrianppety?tab=repositories" },
+    { label: "Código aberto", href: "https://github.com/Adrianppety?tab=repositories" },
   ],
   Recursos: [
-    { label: "Artigos & Estudos", href: "#" },
-    { label: "Snippets Úteis", href: "#" },
-    { label: "Ferramentas Dev", href: "#" },
+    { label: "Artigos e estudos", href: "#" },
+    { label: "Trechos de código úteis", href: "#" },
+    { label: "Ferramentas de desenvolvimento", href: "#" },
   ],
   Carreira: [
     { label: "Sobre Mim", href: "#sobre" },
@@ -42,8 +42,8 @@ export function Footer() {
               </span>
             </Link>
             <p className="text-dark-600 dark:text-dark-400 text-base leading-relaxed mb-6 max-w-xs">
-              Estudante de ADS (3º semestre) • Desenvolvedor Full Stack Jr.
-              Buscando estágio, primeiro emprego, freelance e conexões.
+              Estudante do 3º semestre de ADS e desenvolvedor full stack júnior.
+              Busco estágio, meu primeiro emprego, projetos freelance e conexões na área.
             </p>
             <div className="flex items-center gap-4">
               {socialLinks.map((social) => (

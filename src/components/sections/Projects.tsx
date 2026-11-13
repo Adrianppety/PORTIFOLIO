@@ -28,8 +28,8 @@ export function Projects() {
             Construindo <span className="text-gradient">experiência real</span>
           </h2>
           <p className="text-lg text-dark-600 dark:text-dark-300 leading-relaxed max-w-2xl mx-auto">
-            Atualmente cursando o 3º semestre de ADS e desenvolvendo projetos práticos para consolidar conhecimentos.
-            Esta seção será preenchida conforme eu finalizar projetos de portfólio, freelances e contribuições open source.
+            Atualmente, estou no 3º semestre de ADS e desenvolvo projetos práticos para consolidar meus conhecimentos.
+            Esta seção será atualizada à medida que eu concluir projetos para o portfólio, trabalhos freelance e contribuições para projetos de código aberto.
           </p>
         </motion.div>
 
@@ -39,10 +39,10 @@ export function Projects() {
               <FolderOpen className="w-8 h-8 text-white" />
             </div>
             <h3 className="font-display text-xl font-bold text-dark-950 dark:text-white mb-2">
-              Projetos Acadêmicos
+              Projetos acadêmicos
             </h3>
             <p className="text-dark-600 dark:text-dark-400 mb-4">
-              Trabalhos da faculdade que demonstram fundamentos: algoritmos, POO, banco de dados, engenharia de software.
+              Trabalhos da faculdade que demonstram conhecimentos em algoritmos, programação orientada a objetos (POO), bancos de dados e engenharia de software.
             </p>
             <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300 text-sm font-medium">
               <Code2 className="w-4 h-4" /> Em andamento
@@ -54,10 +54,10 @@ export function Projects() {
               <Sparkles className="w-8 h-8 text-white" />
             </div>
             <h3 className="font-display text-xl font-bold text-dark-950 dark:text-white mb-2">
-              Projetos Pessoais
+              Projetos pessoais
             </h3>
             <p className="text-dark-600 dark:text-dark-400 mb-4">
-              Aplicações full stack desenvolvidas para praticar stack moderna: Next.js, React, Node.js, TypeScript, Docker.
+              Aplicações full stack desenvolvidas para praticar tecnologias modernas, como Next.js, React, Node.js, TypeScript e Docker.
             </p>
             <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300 text-sm font-medium">
               <Plus className="w-4 h-4" /> Em desenvolvimento
@@ -69,10 +69,10 @@ export function Projects() {
               <Github className="w-8 h-8 text-white" />
             </div>
             <h3 className="font-display text-xl font-bold text-dark-950 dark:text-white mb-2">
-              Open Source & Colaborações
+              Código aberto e colaborações
             </h3>
             <p className="text-dark-600 dark:text-dark-400 mb-4">
-              Futuras contribuições para projetos open source, documentações e ferramentas da comunidade dev.
+              Futuras contribuições para projetos de código aberto, documentação e ferramentas para a comunidade de desenvolvimento.
             </p>
             <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300 text-sm font-medium">
               <Github className="w-4 h-4" /> Planejado
@@ -88,7 +88,7 @@ export function Projects() {
           className="text-center mt-16"
         >
           <Button variant="secondary" size="lg" className="group" onClick={() => window.open('https://github.com/Adrianppety', '_blank')}>
-            Ver meu GitHub
+            Acessar meu GitHub
             <ExternalLink className="w-5 h-5 transition-transform group-hover:translate-x-1" />
           </Button>
         </motion.div>

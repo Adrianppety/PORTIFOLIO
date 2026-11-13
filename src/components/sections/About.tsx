@@ -21,13 +21,13 @@ const skills = [
     color: "from-accent-600 to-dark-500",
   },
   {
-    category: "Ferramentas & DevOps",
+    category: "Ferramentas e DevOps",
     items: ["Git / GitHub", "Docker", "Vercel", "VS Code", "Insomnia/Postman"],
     icon: Zap,
     color: "from-primary-700 to-primary-500",
   },
   {
-    category: "Em Aprendizado",
+    category: "Em aprendizado",
     items: ["Docker Avançado", "Kubernetes", "AWS", "Testes Automatizados", "CI/CD"],
     icon: Award,
     color: "from-accent-400 to-primary-600",
@@ -43,11 +43,11 @@ const experience = [
     highlights: ["JavaScript", "TypeScript", "React", "Node.js", "SQL", "Git", "POO", "Metodologias Ágeis"],
   },
   {
-    role: "Transição de Carreira & Busca por Oportunidades",
-    company: "Inserção no Mercado Tech",
+    role: "Transição de carreira e busca por oportunidades",
+    company: "Inserção no mercado de tecnologia",
     period: "2026 - Presente",
-    description: "Ano dedicado à transição efetiva para a área de tecnologia: construção de portfólio sólido, participação em processos seletivos, networking ativo em comunidades tech, contribuições open source e desenvolvimento de projetos reais para demonstrar competência técnica. Foco em estágio, primeiro emprego (CLT) ou freelance.",
-    highlights: ["Portfólio", "Networking", "Open Source", "Entrevistas Técnicas", "Projetos Reais"],
+    description: "Período dedicado à transição para a área de tecnologia, com foco na construção de um portfólio sólido, na participação em processos seletivos, no networking em comunidades de tecnologia, em contribuições para projetos de código aberto e no desenvolvimento de projetos reais para demonstrar minhas habilidades. Busco oportunidades de estágio, primeiro emprego (CLT) ou trabalho freelance.",
+    highlights: ["Portfólio", "Networking", "Código aberto", "Entrevistas técnicas", "Projetos reais"],
   },
 ];
 
@@ -78,7 +78,7 @@ export function About() {
             from={{ opacity: 0, y: 20 }}
             to={{ opacity: 1, y: 0 }}
           >
-            Sobre Mim
+            Sobre mim
           </RevealText>
           <SplitText
             split="words"
@@ -100,10 +100,10 @@ export function About() {
             to={{ opacity: 1, y: 0, filter: "blur(0px)" }}
           >
             Sou Adrian Pety, estudante do 3º semestre de Análise e Desenvolvimento de Sistemas,
-            apaixonado por tecnologia e resolução de problemas. Busco minha primeira oportunidade profissional
+            apaixonado por tecnologia e pela resolução de problemas. Busco minha primeira oportunidade profissional
             (estágio, CLT ou freelance) para aplicar meus conhecimentos em desenvolvimento full stack
-            e crescer junto a uma equipe experiente. Tenho sede de aprender, proatividade e comprometimento
-            em entregar código limpo, performático e bem testado.
+            e crescer ao lado de uma equipe experiente. Tenho vontade de aprender, proatividade e compromisso
+            com a entrega de código limpo, eficiente e bem testado.
           </RevealText>
         </motion.div>
 
@@ -124,7 +124,7 @@ export function About() {
               from={{ opacity: 0, x: -30 }}
               to={{ opacity: 1, x: 0 }}
             >
-              Formação & Jornada
+              Formação e jornada
             </SplitText>
             <div className="space-y-6">
               {experience.map((exp, index) => (
@@ -197,7 +197,7 @@ export function About() {
               from={{ opacity: 0, x: 30 }}
               to={{ opacity: 1, x: 0 }}
             >
-              Stack Tecnológica
+              Stack tecnológica
             </SplitText>
             <div className="space-y-6">
               {skills.map((skill, index) => (
@@ -259,14 +259,14 @@ export function About() {
             from={{ opacity: 0, y: 30 }}
             to={{ opacity: 1, y: 0 }}
           >
-            O que me Move
+            O que me move
           </SplitText>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { icon: Code2, title: "Código Limpo", desc: "Escrevo código legível, testável e manutenível seguindo boas práticas e padrões." },
-              { icon: Brain, title: "Aprendizado Contínuo", desc: "Sempre explorando novas tecnologias e aprimorando habilidades técnicas." },
+              { icon: Code2, title: "Código limpo", desc: "Escrevo código legível, testável e fácil de manter, seguindo boas práticas e padrões." },
+              { icon: Brain, title: "Aprendizado contínuo", desc: "Estou sempre explorando novas tecnologias e aprimorando minhas habilidades técnicas." },
               { icon: Heart, title: "Proatividade", desc: "Tomo iniciativa, busco soluções e não espero alguém me dizer o que fazer." },
-              { icon: Users, title: "Colaboração", desc: "Acredito no poder do trabalho em equipe e comunicação transparente." },
+              { icon: Users, title: "Colaboração", desc: "Acredito no poder do trabalho em equipe e da comunicação transparente." },
             ].map((value, index) => (
               <motion.div
                 key={value.title}
@@ -319,14 +319,14 @@ export function About() {
             from={{ opacity: 0, y: 30 }}
             to={{ opacity: 1, y: 0 }}
           >
-            Objetivos Profissionais
+            Objetivos profissionais
           </SplitText>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               { icon: Code2, title: "Estágio", desc: "Oportunidade para aprender na prática com mentoria de devs experientes." },
-              { icon: Briefcase, title: "Primeiro Emprego (CLT)", desc: "Posição júnior para crescer profissionalmente em equipe estruturada." },
-              { icon: Laptop, title: "Freelance / Projetos", desc: "Trabalhos pontuais para ganhar experiência real e construir portfólio." },
-              { icon: Users, title: "Networking", desc: "Conectar com devs, participar de comunidades e trocar conhecimentos." },
+              { icon: Briefcase, title: "Primeiro emprego (CLT)", desc: "Uma posição júnior para crescer profissionalmente em uma equipe estruturada." },
+              { icon: Laptop, title: "Freelance / projetos", desc: "Trabalhos pontuais para ganhar experiência e construir meu portfólio." },
+              { icon: Users, title: "Networking", desc: "Quero me conectar com outros desenvolvedores, participar de comunidades e trocar conhecimentos." },
             ].map((value, index) => (
               <motion.div
                 key={value.title}

@@ -60,7 +60,11 @@ function splitTextNodes(nodes: React.ReactNode[], split: "chars" | "words"): Rea
         // Split by words but preserve whitespace
         const words = text.match(/\S+|\s+/g) || [];
         words.forEach((word, i) => {
-          result.push(<span key={`${text}-word-${i}`} className="inline-block">{word}</span>);
+          result.push(
+            word.trim()
+              ? <span key={`${text}-word-${i}`} className="inline-block">{word}</span>
+              : word
+          );
         });
       }
     } else if (React.isValidElement(node)) {

@@ -95,7 +95,7 @@ export function Hero() {
                 }}
                 className="text-lg sm:text-xl text-dark-600 dark:text-dark-300 leading-relaxed max-w-xl"
               >
-                Estudante de Análise e Desenvolvimento de Sistemas (3º semestre) apaixonado por construir
+                Estudante do 3º semestre de Análise e Desenvolvimento de Sistemas, apaixonado por criar
                 aplicações web modernas, escaláveis e acessíveis. Busco oportunidades para crescer profissionalmente
                 e transformar ideias complexas em experiências digitais elegantes.
               </motion.p>

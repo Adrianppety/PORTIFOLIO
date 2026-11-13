@@ -222,7 +222,7 @@ export function GlassMorphismCard({
           </h3>
         )}
         {description && (
-          <p className="text-dark-600 dark:text-dark-400 leading-relaxed flex-1 mb-4">
+          <p className="text-dark-600 dark:text-white/75 leading-relaxed flex-1 mb-4">
             {description}
           </p>
         )}

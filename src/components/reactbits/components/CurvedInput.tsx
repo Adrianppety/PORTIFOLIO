@@ -51,46 +51,21 @@ export function CurvedInput({
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
-      <svg
-        className="absolute inset-0 w-full h-full pointer-events-none"
-        viewBox="0 0 400 80"
-        preserveAspectRatio="none"
+      <div
+        className={cn(
+          "absolute inset-0 rounded-2xl border transition-all duration-200",
+          focused
+            ? "border-accent-400/70 bg-accent-500/[0.08] shadow-[0_0_0_3px_rgba(135,150,106,0.12)]"
+            : hovered
+              ? "border-white/20 bg-white/[0.06]"
+              : "border-white/10 bg-[#151713]/80"
+        )}
         aria-hidden="true"
-      >
-        <defs>
-          <filter id="goo" x="-50%" y="-50%" width="200%" height="200%">
-            <feGaussianBlur in="SourceGraphic" stdDeviation="8" result="blur" />
-            <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
-            <feComposite in="SourceGraphic" in2="goo" operator="atop" />
-          </filter>
-        </defs>
-        <path
-          d={`
-            M 0,40
-            Q 100,${40 - curveIntensity * 80} 200,40
-            Q 300,${40 + curveIntensity * 80} 400,40
-            L 400,80
-            L 0,80
-            Z
-          `}
-          fill="url(#inputGradient)"
-          filter="url(#goo)"
-          style={{
-            fill: focused || hovered ? "rgba(135, 150, 106, 0.18)" : "rgba(255, 255, 255, 0.94)",
-            transition: "fill 0.3s ease",
-            transform: "translateY(0px)",
-          }}
-        />
-        <linearGradient id="inputGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-          <stop offset="0%" stopColor="#F8F9F7" stopOpacity="0.95" />
-          <stop offset="50%" stopColor="#EFF2EC" stopOpacity="0.98" />
-          <stop offset="100%" stopColor="#F8F9F7" stopOpacity="0.95" />
-        </linearGradient>
-      </svg>
+      />
 
       <div className="relative z-10 flex items-center h-[62px]" style={{ borderRadius: `var(--border-radius)` }}>
         {icon && (
-          <div className="absolute left-4 top-1/2 -translate-y-1/2 text-dark-400 dark:text-dark-500 transition-colors duration-200" style={{ color: focused ? "#87966A" : undefined }}>
+          <div className="absolute left-4 top-1/2 -translate-y-1/2 text-white/55 transition-colors duration-200" style={{ color: focused ? "#C5D2A8" : undefined }}>
             {icon}
           </div>
         )}
@@ -100,8 +75,8 @@ export function CurvedInput({
           className={cn(
             "absolute left-12 top-1/2 -translate-y-1/2 text-sm font-medium transition-all duration-200 pointer-events-none",
             focused || value
-              ? "top-2.5 -translate-y-0 text-[11px] text-primary-500"
-              : "text-dark-500 dark:text-dark-400"
+              ? "top-2.5 -translate-y-0 text-[11px] text-white/80"
+              : "text-white/55"
           )}
           style={{ left: icon ? "48px" : "16px" }}
         >
@@ -205,45 +180,21 @@ export function CurvedTextarea({
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
-      <svg
-        className="absolute inset-0 w-full h-full pointer-events-none"
-        viewBox="0 0 400 160"
-        preserveAspectRatio="none"
+      <div
+        className={cn(
+          "absolute inset-0 rounded-2xl border transition-all duration-200",
+          focused
+            ? "border-accent-400/70 bg-accent-500/[0.08] shadow-[0_0_0_3px_rgba(135,150,106,0.12)]"
+            : hovered
+              ? "border-white/20 bg-white/[0.06]"
+              : "border-white/10 bg-[#151713]/80"
+        )}
         aria-hidden="true"
-      >
-        <defs>
-          <filter id="gooTextarea" x="-50%" y="-50%" width="200%" height="200%">
-            <feGaussianBlur in="SourceGraphic" stdDeviation="8" result="blur" />
-            <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
-            <feComposite in="SourceGraphic" in2="goo" operator="atop" />
-          </filter>
-        </defs>
-        <path
-          d={`
-            M 0,80
-            Q 100,${80 - curveIntensity * 120} 200,80
-            Q 300,${80 + curveIntensity * 120} 400,80
-            L 400,160
-            L 0,160
-            Z
-          `}
-          fill="url(#textareaGradient)"
-          filter="url(#gooTextarea)"
-          style={{
-            fill: focused || hovered ? "rgba(135, 150, 106, 0.18)" : "rgba(255, 255, 255, 0.94)",
-            transition: "fill 0.3s ease",
-          }}
-        />
-        <linearGradient id="textareaGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-          <stop offset="0%" stopColor="#F8F9F7" stopOpacity="0.95" />
-          <stop offset="50%" stopColor="#EFF2EC" stopOpacity="0.98" />
-          <stop offset="100%" stopColor="#F8F9F7" stopOpacity="0.95" />
-        </linearGradient>
-      </svg>
+      />
 
       <div className="relative z-10 flex items-start" style={{ borderRadius: `var(--border-radius)`, minHeight: "120px" }}>
         {icon && (
-          <div className="absolute left-4 top-5 text-dark-400 dark:text-dark-500 transition-colors duration-200" style={{ color: focused ? "#87966A" : undefined }}>
+          <div className="absolute left-4 top-5 text-white/55 transition-colors duration-200" style={{ color: focused ? "#C5D2A8" : undefined }}>
             {icon}
           </div>
         )}
@@ -253,8 +204,8 @@ export function CurvedTextarea({
           className={cn(
             "absolute left-12 top-4 text-sm font-medium transition-all duration-200 pointer-events-none",
             focused || value
-              ? "top-2.5 text-[11px] text-primary-500"
-              : "text-dark-500 dark:text-dark-400"
+              ? "top-2.5 text-[11px] text-white/80"
+              : "text-white/55"
           )}
           style={{ left: icon ? "48px" : "16px" }}
         >

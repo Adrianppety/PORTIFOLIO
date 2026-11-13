@@ -12,7 +12,7 @@ import { Silk } from "@/components/reactbits/backgrounds/Silk";
 const whatsappNumber = "553981316379";
 
 const contactInfo = [
-  { icon: Mail, label: "Email", value: "adrianppety@gmail.com", href: "mailto:adrianppety@gmail.com" },
+  { icon: Mail, label: "E-mail", value: "adrianppety@gmail.com", href: "mailto:adrianppety@gmail.com" },
   { icon: MapPin, label: "Localização", value: "Pelotas, RS - Brasil", href: null },
   { icon: Phone, label: "WhatsApp", value: "(53) 98131-6379", href: `https://wa.me/${whatsappNumber}` },
 ];
@@ -25,7 +25,7 @@ const socialLinks = [
 
 const objectives = [
   { icon: GraduationCap, label: "Estágio", desc: "Aprender na prática com mentoria" },
-  { icon: Briefcase, label: "Primeiro Emprego (CLT)", desc: "Crescer em equipe estruturada" },
+  { icon: Briefcase, label: "Primeiro emprego (CLT)", desc: "Crescer em uma equipe estruturada" },
   { icon: Laptop, label: "Freelance / Projetos", desc: "Experiência real e portfólio" },
   { icon: Handshake, label: "Networking", desc: "Conexões e troca de conhecimento" },
 ];
@@ -43,12 +43,12 @@ export function Contact() {
 
   const validateForm = () => {
     const newErrors: Record<string, string> = {};
-    if (!formData.name.trim()) newErrors.name = "Nome é obrigatório";
-    if (!formData.email.trim()) newErrors.email = "Email é obrigatório";
-    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) newErrors.email = "Email inválido";
-    if (!formData.subject.trim()) newErrors.subject = "Assunto é obrigatório";
-    if (!formData.message.trim()) newErrors.message = "Mensagem é obrigatória";
-    else if (formData.message.trim().length < 10) newErrors.message = "Mensagem muito curta (mín. 10 caracteres)";
+    if (!formData.name.trim()) newErrors.name = "O nome é obrigatório.";
+    if (!formData.email.trim()) newErrors.email = "O e-mail é obrigatório.";
+    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) newErrors.email = "E-mail inválido.";
+    if (!formData.subject.trim()) newErrors.subject = "O assunto é obrigatório.";
+    if (!formData.message.trim()) newErrors.message = "A mensagem é obrigatória.";
+    else if (formData.message.trim().length < 10) newErrors.message = "A mensagem é muito curta (mínimo de 10 caracteres).";
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
@@ -72,7 +72,7 @@ export function Contact() {
       setFormData({ name: "", email: "", subject: "", message: "" });
     } catch {
       setStatus("error");
-      setErrorMessage("Erro ao abrir o WhatsApp. Tente novamente ou entre em contato por email.");
+      setErrorMessage("Erro ao abrir o WhatsApp. Tente novamente ou entre em contato por e-mail.");
     }
   };
 
@@ -104,14 +104,14 @@ export function Contact() {
           transition={{ duration: 0.6 }}
         >
           <span className="inline-block px-4 py-2 rounded-full bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300 text-sm font-medium mb-4">
-            Entre em Contato
+            Entre em contato
           </span>
           <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-dark-950 dark:text-white mb-6">
             Vamos <span className="text-gradient">conversar</span>?
           </h2>
           <p className="text-lg text-dark-600 dark:text-dark-300 leading-relaxed">
             Estou buscando estágio, primeiro emprego, oportunidades freelance e conexões na área de desenvolvimento.
-            Mande uma mensagem — respondo rápido!
+            Mande uma mensagem — respondo rapidamente!
           </p>
         </motion.div>
 
@@ -125,7 +125,7 @@ export function Contact() {
           >
             <GlassMorphismCard
               title="Contato Direto"
-              description="Prefere chamar no WhatsApp ou mandar email? Ambos funcionam!"
+              description="Prefere chamar no WhatsApp ou enviar um e-mail? As duas opções funcionam."
               interactive={false}
             >
               <div className="space-y-4">
@@ -144,8 +144,8 @@ export function Contact() {
                       <item.icon className="w-6 h-6 text-white" />
                     </div>
                     <div>
-                      <p className="text-sm font-medium text-dark-500 dark:text-dark-500">{item.label}</p>
-                      <p className="text-dark-900 dark:text-white font-medium group-hover:text-primary-500 transition-colors">{item.value}</p>
+                      <p className="text-sm font-medium text-dark-500 dark:text-white/75">{item.label}</p>
+                      <p className="text-dark-900 dark:text-white font-medium group-hover:text-primary-500 dark:group-hover:text-white transition-colors">{item.value}</p>
                     </div>
                   </a>
                 ))}
@@ -153,8 +153,8 @@ export function Contact() {
             </GlassMorphismCard>
 
             <GlassMorphismCard
-              title="Redes & Código"
-              description="Me acompanhe no GitHub e LinkedIn — posto aprendizados e projetos por lá."
+              title="Redes e código"
+              description="Acompanhe meus projetos no GitHub e no LinkedIn. Compartilho meus aprendizados por lá."
               interactive={false}
             >
               <div className="flex flex-wrap gap-3">
@@ -174,7 +174,7 @@ export function Contact() {
             </GlassMorphismCard>
 
             <GlassMorphismCard
-              title="O que Busco"
+              title="O que busco"
               description="Estou aberto a diferentes formatos de trabalho."
               interactive={false}
             >
@@ -215,7 +215,7 @@ export function Contact() {
               <div className="bg-gradient-to-r from-primary-500 to-accent-500 px-6 py-4 rounded-xl mb-8 -mx-8 -mt-8 mb-8">
                 <h3 className="font-display text-xl font-bold text-white flex items-center gap-2">
                   <MessageSquare className="w-6 h-6" />
-                  Mande uma Mensagem
+                  Mande uma mensagem
                 </h3>
               </div>
 
@@ -234,10 +234,10 @@ export function Contact() {
                     <CheckCircle className="w-10 h-10 text-green-500" />
                   </motion.div>
                   <h4 className="font-display text-xl font-bold text-dark-950 dark:text-white mb-2">
-                    Mensagem Enviada!
+                    Mensagem enviada!
                   </h4>
                   <p className="text-dark-600 dark:text-dark-400 mb-6">
-                    Obrigado por entrar em contato, {formData.name || ""}! Responderemos o mais breve possível.
+                    Obrigado por entrar em contato! Responderei assim que possível.
                   </p>
                   <SpecularButton variant="secondary" onClick={() => setStatus("idle")} size="lg">
                     Enviar outra mensagem
@@ -247,7 +247,7 @@ export function Contact() {
                 <form onSubmit={handleSubmit} className="space-y-6" noValidate>
                   <div className="grid sm:grid-cols-2 gap-6">
                     <CurvedInput
-                      label="Seu Nome"
+                      label="Seu nome"
                       name="name"
                       value={formData.name}
                       onChange={(value) => handleChange("name", value)}
@@ -259,7 +259,7 @@ export function Contact() {
                       curveIntensity={0.12}
                     />
                     <CurvedInput
-                      label="Seu Email"
+                      label="Seu e-mail"
                       name="email"
                       type="email"
                       value={formData.email}
@@ -289,7 +289,7 @@ export function Contact() {
                     value={formData.message}
                     onChange={(value) => handleChange("message", value)}
                     error={errors.message}
-                    placeholder="Conte-me sobre a oportunidade, seu projeto ou apenas diga oi..."
+                    placeholder="Conte-me sobre a oportunidade ou o projeto, ou simplesmente diga olá."
                     rows={5}
                     required
                     icon={<MessageSquare className="w-5 h-5" />}
@@ -319,14 +319,14 @@ export function Contact() {
                         </>
                       ) : (
                         <>
-                          Enviar Mensagem
+                          Enviar mensagem
                           <Send className="w-5 h-5" />
                         </>
                       )}
                     </SpecularButton>
                     <p className="text-xs text-dark-500 dark:text-dark-500 text-center self-center">
                       Ao enviar, você concorda com nossa{" "}
-                      <a href="#" className="text-primary-500 hover:underline">Política de Privacidade</a>
+                      <a href="#" className="text-primary-500 hover:underline">Política de privacidade</a>
                     </p>
                   </div>
                 </form>
